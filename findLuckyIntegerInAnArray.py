@@ -3,7 +3,6 @@ def func(array):
 	array=sorted(array)
 	unique={}
 	lucky=[]
-	
 	for i in array:
 		if i not in unique:
 			unique[i]=1
@@ -12,7 +11,6 @@ def func(array):
 	for i in unique:
 		if int(i) == unique[i]:
 			lucky.append(i)
-	
 	if lucky !=[]:
 		return lucky[-1]
 	else:
