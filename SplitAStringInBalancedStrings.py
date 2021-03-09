@@ -22,3 +22,25 @@ print(3,func("RLLLLRRRLR"))
 print(1,func("LLLLRRRR"))
 print(2,func("RLRRRLLRLL"))
 #https://leetcode.com/problems/split-a-string-in-balanced-strings/
+
+
+class Solution:
+    def balancedStringSplit(self, s: str) -> int:
+        L = 0
+        R = 0
+        output = 0
+        for i in range(len(s)):
+            if i == 0:
+                if s[i] == "L":
+                    L += 1
+                else:
+                    R += 1
+            else:
+                if s[i] == "L":
+                    L += 1
+                else:
+                    R += 1
+
+                if L == R:
+                    output += 1
+        return output
